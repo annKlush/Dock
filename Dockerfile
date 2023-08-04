@@ -8,7 +8,7 @@ RUN apt-get update && apt-get -y install nginx
 COPY index.html /var/www/html/index.html  # Fixed typo htm to html
 
 # Expose port 80 for HTTP traffic
-EXPOSE 80  # Changed the exposed port to 80 instead of 3000
+EXPOSE 80  # Changed the exposed port to 80 instead of 3000. Only one port should be exposed.
 
 # Start the nginx service
 CMD ["nginx", "-g", "daemon off;"]
