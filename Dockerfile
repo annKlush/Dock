@@ -2,7 +2,10 @@
 FROM ubuntu:latest
 
 # Update the package manager and install nginx
-RUN apt-get update && apt-get -y install nginx
+RUN apt-get update && apt-get install -y \
+    package-bar \
+    package-baz \
+    package-foo=1.3.*
 
 # Copy the index.html file to the appropriate directory
 COPY index.html /var/www/html/index.html  # Fixed typo htm to html
